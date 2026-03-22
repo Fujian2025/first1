@@ -1,4 +1,4 @@
-# Draw It! - Drawing Mini Game
+# Draw It! - Drawing Mini Game1
 
 A fun web-based drawing game where you get a random item name and draw it on a canvas.
 
