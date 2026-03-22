@@ -1,0 +1,466 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px dashed #007AFF;
+}
+
+header h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 3.5rem;
+    color: #007AFF;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0 rgba(0, 122, 255, 0.2);
+}
+
+header h1 i {
+    margin-right: 15px;
+    color: #FF9500;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Game container layout */
+.game-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.left-panel {
+    flex: 1;
+    max-width: 400px;
+}
+
+.right-panel {
+    flex: 2;
+}
+
+/* Card styles */
+.challenge-card, .tools-card, .canvas-container, .gallery-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    border: 1px solid #eaeaea;
+}
+
+.challenge-card h2, .tools-card h2, .canvas-header h3, .gallery-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.challenge-card h2 i, .tools-card h2 i, .canvas-header h3 i, .gallery-card h2 i {
+    margin-right: 10px;
+    color: #007AFF;
+}
+
+/* Item display */
+.item-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 3px dashed #007AFF;
+}
+
+.item-icon {
+    font-size: 4rem;
+    color: #007AFF;
+    margin-bottom: 15px;
+}
+
+.item-name {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.instruction {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056CC 0%, #004099 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(0, 122, 255, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #8E8E93 0%, #6C6C70 100%);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #6C6C70 0%, #4A4A4D 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(142, 142, 147, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #FF3B30 0%, #D70015 100%);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #D70015 0%, #B30012 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(255, 59, 48, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #4CD964 0%, #2ECC71 100%);
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(76, 217, 100, 0.3);
+}
+
+/* Hint box */
+.hint-box {
+    background-color: #FFF9E6;
+    border-left: 5px solid #FFCC00;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+
+.hint-box p {
+    margin: 0;
+    color: #664D00;
+}
+
+/* Tools card */
+.tool-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tool-section:last-child {
+    border-bottom: none;
+}
+
+.tool-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.tool-section h3 i {
+    margin-right: 8px;
+    color: #FF9500;
+}
+
+/* Color picker */
+.color-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid transparent;
+}
+
+.color-option:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.color-option.active {
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #333, 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-color label {
+    font-weight: 500;
+    color: #555;
+}
+
+.custom-color input[type="color"] {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Brush size */
+.brush-size {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brush-size input[type="range"] {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, #ddd, #007AFF);
+    border-radius: 4px;
+    outline: none;
+}
+
+.brush-size input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #007AFF;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.brush-preview {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brush-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brush-circle::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#brush-size-text {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Tool actions */
+.tool-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tool-actions .btn {
+    padding: 14px 10px;
+    font-size: 0.95rem;
+}
+
+/* Canvas container */
+.canvas-container {
+    height: fit-content;
+}
+
+.canvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.canvas-stats {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    color: #666;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#drawing-canvas {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    border-radius: 12px;
+    border: 3px solid #eaeaea;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.canvas-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    font-style: italic;
+}
+
+.canvas-footer i {
+    margin-right: 5px;
+    color: #007AFF;
+}
+
+/* Gallery */
+.gallery-placeholder {
+    padding: 40px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px dashed #eaeaea;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer i.fa-heart {
+    color: #FF3B30;
+    margin: 0 5px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        max-width: 100%;
+    }
+
+    #drawing-canvas {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .item-name {
+        font-size: 2rem;
+    }
+
+    .controls, .tool-actions {
+        flex-direction: column;
+    }
+
+    #drawing-canvas {
+        height: 400px;
+    }
+
+    .color-picker {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
