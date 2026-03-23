@@ -3,31 +3,31 @@
 
 // Game data - items with hints
 const items = [
-    { name: "Apple", hint: "A red or green fruit with a stem and sometimes a leaf" },
-    { name: "House", hint: "A building with a roof, windows, and a door" },
-    { name: "Tree", hint: "Has a trunk, branches, and green leaves" },
-    { name: "Car", hint: "A vehicle with wheels, windows, and headlights" },
-    { name: "Cat", hint: "A furry animal with pointy ears and whiskers" },
-    { name: "Sun", hint: "A bright circle in the sky with rays shining out" },
-    { name: "Flower", hint: "Has petals, a stem, and sometimes leaves" },
-    { name: "Book", hint: "Rectangular with a cover and pages inside" },
-    { name: "Cup", hint: "A container with a handle for drinking" },
-    { name: "Hat", hint: "Worn on the head, often with a brim" },
-    { name: "Fish", hint: "Swims in water, has fins and a tail" },
-    { name: "Star", hint: "A shape with five or more points" },
-    { name: "Cloud", hint: "Fluffy and white in the sky" },
-    { name: "Pencil", hint: "Used for writing, has a pointy tip" },
-    { name: "Clock", hint: "Round with numbers and hands that show time" },
-    { name: "Key", hint: "Used to open locks, has teeth on one end" },
-    { name: "Butterfly", hint: "An insect with colorful wings" },
-    { name: "Mountain", hint: "A tall landform with a peak" },
-    { name: "Rainbow", hint: "An arch of colors in the sky after rain" },
-    { name: "Robot", hint: "A machine that can move and sometimes talk" },
-    { name: "Ice Cream", hint: "A cold dessert in a cone or cup" },
-    { name: "Bicycle", hint: "A two-wheeled vehicle with pedals" },
-    { name: "Balloon", hint: "Floats in the air when filled with gas" },
-    { name: "Guitar", hint: "A musical instrument with strings and a body" },
-    { name: "Light Bulb", hint: "Glows when turned on, usually pear-shaped" }
+    { name: "苹果", hint: "一种红色或绿色的水果，有茎，有时有叶子" },
+    { name: "房子", hint: "有屋顶、窗户和门的建筑物" },
+    { name: "树", hint: "有树干、树枝和绿叶" },
+    { name: "汽车", hint: "有轮子、窗户和前灯的车辆" },
+    { name: "猫", hint: "有尖耳朵和胡须的毛茸茸动物" },
+    { name: "太阳", hint: "天空中的明亮圆盘，散发着光芒" },
+    { name: "花", hint: "有花瓣、茎，有时有叶子" },
+    { name: "书", hint: "长方形，有封面和里面的页面" },
+    { name: "杯子", hint: "有把手的饮水容器" },
+    { name: "帽子", hint: "戴在头上，通常有帽檐" },
+    { name: "鱼", hint: "在水中游泳，有鳍和尾巴" },
+    { name: "星星", hint: "有五个或更多点的形状" },
+    { name: "云", hint: "天空中蓬松的白色云朵" },
+    { name: "铅笔", hint: "用于书写，有尖尖的笔尖" },
+    { name: "时钟", hint: "圆形，有数字和显示时间的指针" },
+    { name: "钥匙", hint: "用于开锁，一端有齿" },
+    { name: "蝴蝶", hint: "有彩色翅膀的昆虫" },
+    { name: "山", hint: "有山峰的高大地形" },
+    { name: "彩虹", hint: "雨后天空中的彩色拱形" },
+    { name: "机器人", hint: "可以移动，有时会说话的机器" },
+    { name: "冰淇淋", hint: "装在蛋筒或杯子里的冷甜点" },
+    { name: "自行车", hint: "有踏板的两轮车辆" },
+    { name: "气球", hint: "充气后漂浮在空中的气球" },
+    { name: "吉他", hint: "有弦和琴身的乐器" },
+    { name: "灯泡", hint: "通电时会发光，通常呈梨形" }
 ];
 
 // Game state
@@ -86,7 +86,7 @@ function init() {
     // Initialize drawing history with blank canvas
     saveDrawingState();
 
-    console.log("Draw It! game initialized");
+    console.log("画一画！游戏已初始化");
 }
 
 // Get a random item from the list
@@ -118,31 +118,31 @@ function getRandomItem() {
 // Update the item icon based on name
 function updateItemIcon(itemName) {
     const iconMap = {
-        'Apple': 'fas fa-apple-alt',
-        'House': 'fas fa-home',
-        'Tree': 'fas fa-tree',
-        'Car': 'fas fa-car',
-        'Cat': 'fas fa-cat',
-        'Sun': 'fas fa-sun',
-        'Flower': 'fas fa-seedling',
-        'Book': 'fas fa-book',
-        'Cup': 'fas fa-mug-hot',
-        'Hat': 'fas fa-hat-cowboy',
-        'Fish': 'fas fa-fish',
-        'Star': 'fas fa-star',
-        'Cloud': 'fas fa-cloud',
-        'Pencil': 'fas fa-pencil-alt',
-        'Clock': 'fas fa-clock',
-        'Key': 'fas fa-key',
-        'Butterfly': 'fas fa-butterfly',
-        'Mountain': 'fas fa-mountain',
-        'Rainbow': 'fas fa-rainbow',
-        'Robot': 'fas fa-robot',
-        'Ice Cream': 'fas fa-ice-cream',
-        'Bicycle': 'fas fa-bicycle',
-        'Balloon': 'fas fa-baloon',
-        'Guitar': 'fas fa-guitar',
-        'Light Bulb': 'fas fa-lightbulb'
+        '苹果': 'fas fa-apple-alt',
+        '房子': 'fas fa-home',
+        '树': 'fas fa-tree',
+        '汽车': 'fas fa-car',
+        '猫': 'fas fa-cat',
+        '太阳': 'fas fa-sun',
+        '花': 'fas fa-seedling',
+        '书': 'fas fa-book',
+        '杯子': 'fas fa-mug-hot',
+        '帽子': 'fas fa-hat-cowboy',
+        '鱼': 'fas fa-fish',
+        '星星': 'fas fa-star',
+        '云': 'fas fa-cloud',
+        '铅笔': 'fas fa-pencil-alt',
+        '时钟': 'fas fa-clock',
+        '钥匙': 'fas fa-key',
+        '蝴蝶': 'fas fa-butterfly',
+        '山': 'fas fa-mountain',
+        '彩虹': 'fas fa-rainbow',
+        '机器人': 'fas fa-robot',
+        '冰淇淋': 'fas fa-ice-cream',
+        '自行车': 'fas fa-bicycle',
+        '气球': 'fas fa-baloon',
+        '吉他': 'fas fa-guitar',
+        '灯泡': 'fas fa-lightbulb'
     };
 
     const itemIcon = document.querySelector('.item-icon i');
@@ -368,8 +368,8 @@ function updateStats() {
     const seconds = drawingTime % 60;
     const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
-    drawingTimeElement.textContent = `Time: ${timeString}`;
-    strokeCountElement.textContent = `Strokes: ${strokeCount}`;
+    drawingTimeElement.textContent = `时间：${timeString}`;
+    strokeCountElement.textContent = `笔划：${strokeCount}`;
 }
 
 // Save drawing as image
@@ -388,7 +388,7 @@ function saveDrawing() {
 
     // Show feedback
     const originalText = saveButton.innerHTML;
-    saveButton.innerHTML = '<i class="fas fa-check"></i> Saved!';
+    saveButton.innerHTML = '<i class="fas fa-check"></i> 已保存！';
     saveButton.classList.add('btn-success');
 
     setTimeout(() => {
